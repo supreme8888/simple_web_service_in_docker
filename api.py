@@ -1,6 +1,6 @@
 # Product service
 
-from flask import flask
+from flask import Flask
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
@@ -11,7 +11,7 @@ class Product(Resource):
         return {
             'food': ['Meat',
             'Bread',
-            'milk']
+            'Milk']
         }
 
 api.add_resource(Product, '/')
