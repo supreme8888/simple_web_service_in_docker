@@ -1,9 +1,0 @@
-version: '3'
-
-services:
-  product-service:
-    build: ./product
-    volumes:
-      - ./simple_web_service_in_docker:/usr/src/app
-    ports:
-      - 5001:80

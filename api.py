@@ -4,17 +4,21 @@ from flask import Flask
 from flask_restful import Resource, Api
 
 app = Flask(__name__)
-api = Apo(app)
+api = Api(app)
 
 class Product(Resource):
     def get(self):
         return {
             'food': ['Meat',
             'Bread',
-            'Milk']
+            'Milk',
+            'Fruits'
+            'Drinks'
+            'Eggs'
+               ]
         }
 
 api.add_resource(Product, '/')
 
 if __name__== '__main__':
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=80)
